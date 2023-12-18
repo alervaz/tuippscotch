@@ -4,7 +4,7 @@ Tuippscotch is a TUI based http client capable of doing GET, POST, PUT, PATCH, D
 It is an simplification of https://hoppscotch.io/ which is also an http client that has fantastic features
 
 ## Navigation
-To navigate between methods use the arrow keys, to focus the URL bar type Ctrl + U, to focus the Body textarea type Ctrl + B and to focus the response type Ctrl + R
+To navigate between methods use the arrow keys, to focus the URL bar type Ctrl + U, to focus the Body textarea type Ctrl + B and to focus the response type Ctrl + R and to focuse the headers type Ctrl + x
 
 ## Sending a request
 To send a request press enter, you can't send a request while editing the body
