@@ -33,5 +33,24 @@ func main() {
 		)
 	})
 
+	e.POST("/header", func(c echo.Context) error {
+		name := c.Request().Header.Get("name")
+		ageStr := c.Request().Header.Get("age")
+		if name == "" || ageStr == "" {
+			return c.String(
+				http.StatusBadRequest,
+				"You need to provide the persons name and age via headers",
+			)
+		}
+		return c.String(
+			http.StatusOK,
+			fmt.Sprintf(
+				"The person %s that is %s years old added to the database",
+				name,
+				ageStr,
+			),
+		)
+	})
+
 	e.Logger.Fatal(e.Start(":3000"))
 }

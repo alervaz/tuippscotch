@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io"
 	"log"
@@ -31,6 +32,7 @@ const (
 	BODY
 	NONE
 	RESPONSE
+	HEADERS
 )
 
 type model struct {
@@ -44,6 +46,7 @@ type model struct {
 	bodyInput         *BodyInput
 	styles            *styles
 	response          *ResponseInput
+	headersInput      *HeadersInput
 }
 
 func initModel() *model {
@@ -53,6 +56,7 @@ func initModel() *model {
 		styles:            getStyles(),
 		currentInputStyle: NONE,
 		response:          newResponseInput(),
+		headersInput:      newHeadersInput(),
 	}
 }
 
@@ -114,17 +118,39 @@ func (m *model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.currentInput = m.response
 			cmd := m.response.Focus()
 			return m, cmd
+		case "ctrl+x":
+			m.currentInputStyle = HEADERS
+			m.currentInput = m.headersInput
+			cmd := m.headersInput.Focus()
+			return m, cmd
 		case "enter":
-			if m.currentInputStyle != BODY {
+			if m.currentInputStyle == URL {
 				url := m.urlInput.Value()
 				body := m.bodyInput.Value()
 				reader := strings.NewReader(body)
+				headerStr := m.headersInput.Value()
 				log.Println(url, body, reader)
 
 				req, err := http.NewRequest(string(verbs[m.currentVerb]), url, reader)
 				if err != nil {
 					m.response.SetValue(fmt.Sprintf("%s", err.Error()))
 					return m, nil
+				}
+
+				headersReader := strings.NewReader(headerStr)
+				scanner := bufio.NewScanner(headersReader)
+
+				for scanner.Scan() {
+					line := scanner.Text()
+					sep := strings.Split(line, ":")
+					if len(sep) != 2 {
+						continue
+					}
+
+					header := strings.TrimSpace(sep[0])
+					value := strings.TrimSpace(sep[1])
+
+					req.Header.Add(header, value)
 				}
 
 				client := &http.Client{Timeout: time.Second * 60}
@@ -181,6 +207,13 @@ func (m model) View() string {
 		bodyInput += m.styles.unFocusedInput.Render(m.bodyInput.View())
 	}
 
+	headersInput := ""
+	if m.currentInputStyle == HEADERS {
+		headersInput += m.styles.focusedInput.Height(20).Render(m.headersInput.View())
+	} else {
+		headersInput += m.styles.unFocusedInput.Width(50).Render(m.headersInput.View())
+	}
+
 	response := ""
 	if m.currentInputStyle == RESPONSE {
 		response += m.styles.focusedInput.Height(20).Render(m.response.View())
@@ -201,7 +234,11 @@ func (m model) View() string {
 				verbView,
 				urlInput,
 			),
-			bodyInput,
+			lipgloss.JoinHorizontal(
+				lipgloss.Center,
+				bodyInput,
+				headersInput,
+			),
 			response,
 		),
 	)

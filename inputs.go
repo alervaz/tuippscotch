@@ -130,3 +130,42 @@ func newResponseInput() *ResponseInput {
 		ra: responseInput,
 	}
 }
+
+type HeadersInput struct {
+	ha textarea.Model
+}
+
+func (h *HeadersInput) Blur() {
+	h.ha.Blur()
+}
+
+func (h *HeadersInput) Update(msg tea.Msg) (Input, tea.Cmd) {
+	var cmd tea.Cmd
+	h.ha, cmd = h.ha.Update(msg)
+	return h, cmd
+}
+
+func (h *HeadersInput) View() string {
+	return h.ha.View()
+}
+
+func (h *HeadersInput) Focus() tea.Cmd {
+	return h.ha.Focus()
+}
+
+func (h *HeadersInput) Value() string {
+	return h.ha.Value()
+}
+
+func (h *HeadersInput) SetValue(value string) {
+	h.ha.SetValue(value)
+}
+
+func newHeadersInput() *HeadersInput {
+	headersInput := textarea.New()
+	headersInput.Placeholder = "Headers..."
+
+	return &HeadersInput{
+		ha: headersInput,
+	}
+}

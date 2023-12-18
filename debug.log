@@ -1,188 +1,28 @@
-debug 2023/12/18 00:14:19  
-debug 2023/12/18 00:14:19  
-debug 2023/12/18 00:14:20  
-debug 2023/12/18 00:14:20  
-debug 2023/12/18 00:14:20  
-debug 2023/12/18 00:14:20  
-debug 2023/12/18 00:14:20  
-debug 2023/12/18 00:14:21  
-debug 2023/12/18 00:15:07   &{ 0 -1}
-debug 2023/12/18 00:15:08   &{ 0 -1}
-debug 2023/12/18 00:15:08   &{ 0 -1}
-debug 2023/12/18 00:15:08   &{ 0 -1}
-debug 2023/12/18 00:15:08   &{ 0 -1}
-debug 2023/12/18 00:15:11 sdded  &{ 0 -1}
-debug 2023/12/18 00:15:14 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:14 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:14 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:14 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:15 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:15 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:32 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:32 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:32 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:32 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:33 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:33 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:33 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:33 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:33 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:33 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:33 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:33 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:15:33 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:15:33 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:16:13 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:17:25 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:17:25 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:17:26 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:17:26 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:17:26 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:17:26 &{GET https://hoppscotch.io/ HTTP/1.1 1 1 map[] {} 0x597220 0 [] false hoppscotch.io map[] map[] <nil> map[]   <nil> <nil> <nil> {{}}} <nil>
-debug 2023/12/18 00:22:16 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:23:30 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:28:21 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:30:15 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:34:05 https://hoppscotch.io/  &{ 0 -1}
-debug 2023/12/18 00:40:48 https://jsonplaceholder.typicode.com/todos/1  &{ 0 -1}
-debug 2023/12/18 00:43:56 https://jsonplaceholder.typicode.com/todos/1  &{ 0 -1}
-debug 2023/12/18 00:46:42 http://localhost:3000  &{ 0 -1}
-debug 2023/12/18 00:48:45 http://localhost:3000 Hello &{Hello 0 -1}
-debug 2023/12/18 00:48:53 http://localhost:3000 "Hello" &{"Hello" 0 -1}
-debug 2023/12/18 00:50:07 http://localhost:3000 { &{{ 0 -1}
-debug 2023/12/18 00:50:09 http://localhost:3000 { &{{ 0 -1}
-debug 2023/12/18 00:51:34 http://localhost:3000 {
-"name": "Alejandro",
-"age": 15,
-} &{{
-"name": "Alejandro",
-"age": 15,
-} 0 -1}
-debug 2023/12/18 00:51:46 http://localhost:3000 {
-"name": "Alejandro",
-"age": 15
-} &{{
-"name": "Alejandro",
-"age": 15
-} 0 -1}
-debug 2023/12/18 00:52:03 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 00:59:28 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 00:59:32 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:11 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:13 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:13 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:14 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:15 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:15 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:44 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:47 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:50 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:01:54 http://localhost:300 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:02:00 http:/  &{ 0 -1}
-debug 2023/12/18 01:02:11 http://localhost:30  &{ 0 -1}
-debug 2023/12/18 01:03:45   &{ 0 -1}
-debug 2023/12/18 01:03:46 s  &{ 0 -1}
-debug 2023/12/18 01:03:46 s  &{ 0 -1}
-debug 2023/12/18 01:03:46 s  &{ 0 -1}
-debug 2023/12/18 01:03:46 s  &{ 0 -1}
-debug 2023/12/18 01:04:35   &{ 0 -1}
-debug 2023/12/18 01:05:16 s  &{ 0 -1}
-debug 2023/12/18 01:05:27 http://localhost:9090  &{ 0 -1}
-debug 2023/12/18 01:07:26 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:07:31 http://localhost:3000 {
-"name": "John",
-"age": 37
-} &{{
-"name": "John",
-"age": 37
-} 0 -1}
-debug 2023/12/18 01:12:35   &{ 0 -1}
-debug 2023/12/18 01:12:47   &{ 0 -1}
-debug 2023/12/18 01:12:48   &{ 0 -1}
-debug 2023/12/18 01:12:48   &{ 0 -1}
-debug 2023/12/18 01:12:48   &{ 0 -1}
-debug 2023/12/18 01:12:48   &{ 0 -1}
+debug 2023/12/18 09:42:03 jdejw  &{ 0 -1}
+debug 2023/12/18 09:43:32 jdejw  &{ 0 -1}
+debug 2023/12/18 09:43:32 hola pa
+debug 2023/12/18 09:43:38 jdejw  &{ 0 -1}
+debug 2023/12/18 09:43:38 hola pa
+debug 2023/12/18 09:43:42 jdej  &{ 0 -1}
+debug 2023/12/18 09:43:42 hola pa
+debug 2023/12/18 09:43:44 jdej  &{ 0 -1}
+debug 2023/12/18 09:43:44 hola pa
+debug 2023/12/18 09:44:42   &{ 0 -1}
+debug 2023/12/18 09:44:42 hola pa
+debug 2023/12/18 09:44:42 pa
+debug 2023/12/18 09:49:29   &{ 0 -1}
+debug 2023/12/18 09:49:29 Header: "Content-Type", Value: "application/json"
+debug 2023/12/18 09:49:42   &{ 0 -1}
+debug 2023/12/18 09:51:49   &{ 0 -1}
+debug 2023/12/18 09:51:49 Header: Content-Type, Value: application/json
+debug 2023/12/18 09:55:37 http://localhost:3000/header  &{ 0 -1}
+debug 2023/12/18 09:55:39 http://localhost:3000/header  &{ 0 -1}
+debug 2023/12/18 09:55:57 http://localhost:3000/header  &{ 0 -1}
+debug 2023/12/18 09:56:07 http://localhost:3000/header  &{ 0 -1}
+debug 2023/12/18 09:56:26 http://localhost:3000/header  &{ 0 -1}
+debug 2023/12/18 09:56:27 http://localhost:3000/header'  &{ 0 -1}
+debug 2023/12/18 09:56:29 http://localhost:3000/heade  &{ 0 -1}
+debug 2023/12/18 09:56:29 http://localhost:3000/heade  &{ 0 -1}
+debug 2023/12/18 09:56:29 http://localhost:3000/heade  &{ 0 -1}
+debug 2023/12/18 09:56:29 http://localhost:3000/heade  &{ 0 -1}
+debug 2023/12/18 09:56:31 http://localhost:3000/header  &{ 0 -1}
