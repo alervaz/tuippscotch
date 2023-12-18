@@ -2,6 +2,8 @@ package main
 
 import (
 	"bufio"
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -74,7 +76,7 @@ func (m *model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, nil
 	case tea.KeyMsg:
 		switch msg.String() {
-		case "ctrl+c", "ctrl+z", "ctrl+d", "q":
+		case "q":
 			return m, tea.Quit
 		case "tab":
 			if m.currentMode == 0 {
@@ -166,7 +168,14 @@ func (m *model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					m.response.SetValue(fmt.Sprintf("%s", err.Error()))
 					return m, nil
 				}
-				m.response.SetValue(fmt.Sprintf("Code %d: %s", res.StatusCode, string(buf)))
+
+				var out bytes.Buffer
+				err = json.Indent(&out, buf, " ", " ")
+				if err != nil {
+					m.response.SetValue(fmt.Sprintf("Code %d: %s", res.StatusCode, fmt.Sprintf("%s", string(buf))))
+					return m, nil
+				}
+				m.response.SetValue(fmt.Sprintf("Code %d: %s", res.StatusCode, fmt.Sprintf("%s", out.String())))
 				return m, nil
 			}
 		}
@@ -195,30 +204,43 @@ func (m model) View() string {
 
 	urlInput := ""
 	if m.currentInputStyle == URL {
-		urlInput += m.styles.focusedInput.Height(1).Render(m.urlInput.View())
+		urlInput += m.styles.focusedInput.Render(m.urlInput.View())
 	} else {
 		urlInput += m.styles.unFocusedInput.Render(m.urlInput.View())
 	}
 
 	bodyInput := ""
 	if m.currentInputStyle == BODY {
-		bodyInput += m.styles.focusedInput.Height(20).Render(m.bodyInput.View())
+		m.bodyInput.ta.SetHeight(m.styles.focusedAreaInput.GetHeight())
+		m.bodyInput.ta.SetWidth(m.styles.focusedAreaInput.GetWidth())
+		// m.bodyInput.
+		bodyInput += m.styles.focusedAreaInput.Render(m.bodyInput.View())
 	} else {
-		bodyInput += m.styles.unFocusedInput.Render(m.bodyInput.View())
+		m.bodyInput.ta.SetHeight(m.styles.unFocusedAreaInput.GetHeight())
+		m.bodyInput.ta.SetWidth(m.styles.unFocusedAreaInput.GetWidth())
+		bodyInput += m.styles.unFocusedAreaInput.Render(m.bodyInput.View())
 	}
 
 	headersInput := ""
 	if m.currentInputStyle == HEADERS {
-		headersInput += m.styles.focusedInput.Height(20).Render(m.headersInput.View())
+		m.headersInput.ha.SetHeight(m.styles.focusedAreaInput.GetHeight())
+		m.headersInput.ha.SetWidth(m.styles.focusedAreaInput.GetWidth())
+		headersInput += m.styles.focusedAreaInput.Render(m.headersInput.View())
 	} else {
-		headersInput += m.styles.unFocusedInput.Width(50).Render(m.headersInput.View())
+		m.headersInput.ha.SetHeight(m.styles.unFocusedAreaInput.GetHeight())
+		m.headersInput.ha.SetWidth(m.styles.unFocusedAreaInput.GetWidth())
+		headersInput += m.styles.unFocusedAreaInput.Render(m.headersInput.View())
 	}
 
 	response := ""
 	if m.currentInputStyle == RESPONSE {
-		response += m.styles.focusedInput.Height(20).Render(m.response.View())
+		m.response.ra.SetHeight(m.styles.focusedAreaInput.GetHeight())
+		m.response.ra.SetWidth(m.styles.focusedAreaInput.GetWidth())
+		response += m.styles.focusedAreaInput.Render(m.response.View())
 	} else {
-		response += m.styles.unFocusedInput.Render(m.response.View())
+		m.response.ra.SetHeight(m.styles.unFocusedAreaInput.GetHeight())
+		m.response.ra.SetWidth(m.styles.unFocusedAreaInput.GetWidth())
+		response += m.styles.unFocusedAreaInput.Render(m.response.View())
 	}
 
 	return lipgloss.Place(
