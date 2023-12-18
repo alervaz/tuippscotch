@@ -1,4 +1,4 @@
-module tuippscotch
+module github.com/alervaz/tuippscotch
 
 go 1.21.5
 
